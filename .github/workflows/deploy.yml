@@ -28,7 +28,7 @@ jobs:
       - name: Stage site files
         run: |
           mkdir -p _site
-          cp *.html *.css *.js public Activity _site/
+          cp -r *.html *.css *.js public Activity _site/
           touch _site/.nojekyll
 
       - uses: actions/upload-pages-artifact@v3
