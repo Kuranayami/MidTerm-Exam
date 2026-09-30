@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>News Daily</title>
+    <script>try { var t = localStorage.getItem("newsdaily-theme"); if (!t) { t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-theme", t); } catch (e) { document.documentElement.setAttribute("data-theme", "light"); }</script>
 </head>
 
 <body>
@@ -25,13 +26,23 @@
                         <li><a class="Entertainment" href="Entertainment.html">Entertainment</a></li>
                         <li><a class="Health" href="Health.html">Health</a></li>
                         <li><a class="LifeStyle" href="LifeStyle.html">LifeStyle</a></li>
-                        <li><a class="LifeStyle" href="Activity/resume/index.html">Activity</a></li>
+                        <li class="dropdown">
+                            <a class="Activity" href="#">Activity</a>
+                            <ul class="dropdown-content">
+                                <li><a href="Activity/resume/resume.html">Resume</a></li>
+                                <li><a href="Activity/list/list.html">List</a></li>
+                                <li><a href="Activity/calendar/calendar.html">Calendar</a></li>
+                                <li><a href="Activity/movie/movie.html">Movie</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
                 <div class="Searchcontainer">
                     <form class="search" role="search">
                         <input type="search" id="search-input" placeholder="LIVE UPDATES...">
                     </form>
+                    <button class="theme-toggle" type="button" aria-pressed="false"
+                        aria-label="Switch to dark mode" title="Switch to dark mode">&#9788;</button>
                 </div>
             </div>
         </header>

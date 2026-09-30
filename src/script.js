@@ -1,71 +1,57 @@
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+const THEME_KEY = 'newsdaily-theme';
 
-console.log(innerWidth);
-
-document.querySelectorAll('.Navlist a').forEach((link) => {
-    const linkPage = link.getAttribute('href');
-
-    if (linkPage === currentPage) {
-        link.classList.add('active');
-        link.setAttribute('aria-current', 'page');
-    } else {
-        link.removeAttribute('aria-current');
+function getStoredTheme() {
+    try {
+        return localStorage.getItem(THEME_KEY);
+    } catch {
+        return null;
     }
-});
-
-function navigateWithTransition(url) {
-    const targetPage = url.split('/').pop().split('#')[0] || 'index.html';
-    const current = window.location.pathname.split('/').pop().split('#')[0] || 'index.html';
-
-    if (targetPage === current && !url.includes('#')) {
-        return;
-    }
-
-    document.body.classList.add('fade-out');
-    setTimeout(() => {
-        window.location.href = url;
-    }, 200);
 }
 
-document.querySelectorAll('a[href]').forEach((link) => {
-    link.addEventListener('click', (e) => {
-        const href = link.getAttribute('href');
+function resolveTheme() {
+    const stored = getStoredTheme();
 
-        if (
-            !href ||
-            href === '#' ||
-            href.startsWith('#') ||
-            href.startsWith('javascript:') ||
-            link.target === '_blank' ||
-            href.startsWith('http://') ||
-            href.startsWith('https://')
-        ) {
-            return;
-        }
+    if (stored === 'dark' || stored === 'light') {
+        return stored;
+    }
 
-        e.preventDefault();
-        navigateWithTransition(href);
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light';
+}
+
+function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+
+    try {
+        localStorage.setItem(THEME_KEY, theme);
+    } catch {
+    }
+
+    document.querySelectorAll('.theme-toggle').forEach((btn) => {
+        const isDark = theme === 'dark';
+        btn.textContent = isDark ? '\u2600' : '\u263E';
+        btn.setAttribute('aria-pressed', String(isDark));
+        btn.setAttribute(
+            'aria-label',
+            isDark ? 'Switch to light mode' : 'Switch to dark mode'
+        );
+        btn.title = isDark ? 'Switch to light mode' : 'Switch to dark mode';
     });
+}
 
-    link.addEventListener('keydown', (e) => {
-        if (e.key === ' ') {
-            const href = link.getAttribute('href');
-            if (
-                href &&
-                href !== '#' &&
-                !href.startsWith('#') &&
-                !href.startsWith('javascript:') &&
-                link.target !== '_blank' &&
-                !href.startsWith('http://') &&
-                !href.startsWith('https://')
-            ) {
-                e.preventDefault();
-                navigateWithTransition(href);
-            }
-        }
+document.documentElement.setAttribute('data-theme', resolveTheme());
+
+document.addEventListener('DOMContentLoaded', () => {
+    applyTheme(document.documentElement.getAttribute('data-theme') || 'light');
+
+    document.querySelectorAll('.theme-toggle').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const next =
+                document.documentElement.getAttribute('data-theme') === 'dark'
+                    ? 'light'
+                    : 'dark';
+            applyTheme(next);
+        });
     });
-});
-
-window.addEventListener('pageshow', () => {
-    document.body.classList.remove('fade-out');
 });

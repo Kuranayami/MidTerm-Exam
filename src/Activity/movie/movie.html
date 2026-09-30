@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="movie.css">
+    <title>Movie Explorer | News Daily</title>
+    <script>try{var t=localStorage.getItem("newsdaily-theme");if(!t){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","light");}</script>
+</head>
+
+<body>
+    <div class="Webcontainer">
+        <header>
+            <div class="Headercontainer">
+                <div class="Titlecontainer">
+                    <h1><span>News</span>Daily</h1>
+                </div>
+                <nav aria-label="Main navigation">
+                    <ul class="Navlist">
+                        <li><a class="Home" href="../../index.html">Home</a></li>
+                        <li><a class="World" href="../../World.html">World</a></li>
+                        <li><a class="Business" href="../../Business.html">Business</a></li>
+                        <li><a class="Technology" href="../../Technology.html">Technology</a></li>
+                        <li><a class="Sports" href="../../Sports.html">Sports</a></li>
+                        <li><a class="Entertainment" href="../../Entertainment.html">Entertainment</a></li>
+                        <li><a class="Health" href="../../Health.html">Health</a></li>
+                        <li><a class="LifeStyle" href="../../LifeStyle.html">LifeStyle</a></li>
+                        <li class="dropdown">
+                            <a class="Activity" href="#">Activity</a>
+                            <ul class="dropdown-content">
+                                <li><a href="../resume/resume.html">Resume</a></li>
+                                <li><a href="../list/list.html">List</a></li>
+                                <li><a href="../calendar/calendar.html">Calendar</a></li>
+                                <li><a href="./movie.html">Movie</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="Searchcontainer">
+                    <form class="search" role="search">
+                        <input type="search" id="search-input" placeholder="LIVE UPDATES...">
+                    </form>
+                    <button class="theme-toggle" type="button" aria-pressed="false"
+                        aria-label="Switch to dark mode" title="Switch to dark mode">&#9788;</button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="Maincontainer">
+
+                <section class="page-head">
+                    <h1>Movie Explorer</h1>
+                    <p>A movie discovery layout rebuilt with the NewsDaily design system.</p>
+                </section>
+
+                <section class="featured">
+                    <div class="featured-text">
+                        <span class="featured-tag">Featured</span>
+                        <h2 class="featured-title">Find Your Next<br>Favorite Film</h2>
+                        <p class="featured-desc">
+                            Browse curated picks across every genre, from blockbusters to indie
+                            gems. Pick a poster below to explore the collection.
+                        </p>
+                        <div class="chip-row">
+                            <span class="chip chip-blue">Trending</span>
+                            <span class="chip chip-red">Top Rated</span>
+                            <span class="chip chip-purple">Coming Soon</span>
+                            <span class="chip chip-green">Award Winner</span>
+                        </div>
+                        <a class="featured-btn" href="#movie-grid">Browse All</a>
+                    </div>
+                    <figure class="featured-art">
+                        <img src="./poster6.png" alt="Featured movie poster">
+                    </figure>
+                </section>
+
+                <section class="page-head sub-head">
+                    <h2>Popular This Week</h2>
+                </section>
+
+                <section class="movie-grid" id="movie-grid" aria-label="Movie posters">
+                    <article class="movie-card">
+                        <figure class="poster">
+                            <img src="./poster1.png" alt="Poster for Neon Horizon">
+                            <figcaption class="poster-ovl">
+                                <span class="ovl-title">Neon Horizon</span>
+                                <span class="ovl-meta">Sci-Fi &middot; 2024</span>
+                            </figcaption>
+                        </figure>
+                        <div class="movie-info">
+                            <h3 class="movie-name">Neon Horizon</h3>
+                            <p class="movie-genre">Sci-Fi &middot; 2024</p>
+                            <div class="rating-row">
+                                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                <span class="rating-num">4.8</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <figure class="poster">
+                            <img src="./poster2.png" alt="Poster for Silent Ascent">
+                            <figcaption class="poster-ovl">
+                                <span class="ovl-title">Silent Ascent</span>
+                                <span class="ovl-meta">Thriller &middot; 2023</span>
+                            </figcaption>
+                        </figure>
+                        <div class="movie-info">
+                            <h3 class="movie-name">Silent Ascent</h3>
+                            <p class="movie-genre">Thriller &middot; 2023</p>
+                            <div class="rating-row">
+                                <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+                                <span class="rating-num">4.3</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <figure class="poster">
+                            <img src="./poster3.png" alt="Poster for Last Ember">
+                            <figcaption class="poster-ovl">
+                                <span class="ovl-title">Last Ember</span>
+                                <span class="ovl-meta">Fantasy &middot; 2024</span>
+                            </figcaption>
+                        </figure>
+                        <div class="movie-info">
+                            <h3 class="movie-name">Last Ember</h3>
+                            <p class="movie-genre">Fantasy &middot; 2024</p>
+                            <div class="rating-row">
+                                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                <span class="rating-num">4.9</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <figure class="poster">
+                            <img src="./poster4.png" alt="Poster for Paper Kingdoms">
+                            <figcaption class="poster-ovl">
+                                <span class="ovl-title">Paper Kingdoms</span>
+                                <span class="ovl-meta">Animation &middot; 2022</span>
+                            </figcaption>
+                        </figure>
+                        <div class="movie-info">
+                            <h3 class="movie-name">Paper Kingdoms</h3>
+                            <p class="movie-genre">Animation &middot; 2022</p>
+                            <div class="rating-row">
+                                <span class="stars">&#9733;&#9733;&#9733;</span>
+                                <span class="rating-num">3.9</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <figure class="poster">
+                            <img src="./poster5.png" alt="Poster for Deep Current">
+                            <figcaption class="poster-ovl">
+                                <span class="ovl-title">Deep Current</span>
+                                <span class="ovl-meta">Drama &middot; 2023</span>
+                            </figcaption>
+                        </figure>
+                        <div class="movie-info">
+                            <h3 class="movie-name">Deep Current</h3>
+                            <p class="movie-genre">Drama &middot; 2023</p>
+                            <div class="rating-row">
+                                <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+                                <span class="rating-num">4.1</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <figure class="poster">
+                            <img src="./poster6.png" alt="Poster for Midnight Run">
+                            <figcaption class="poster-ovl">
+                                <span class="ovl-title">Midnight Run</span>
+                                <span class="ovl-meta">Action &middot; 2024</span>
+                            </figcaption>
+                        </figure>
+                        <div class="movie-info">
+                            <h3 class="movie-name">Midnight Run</h3>
+                            <p class="movie-genre">Action &middot; 2024</p>
+                            <div class="rating-row">
+                                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                <span class="rating-num">4.5</span>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="stats">
+                    <div class="stat">
+                        <span class="stat-num">128</span>
+                        <span class="stat-label">Movies</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">14</span>
+                        <span class="stat-label">Genres</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">4.6</span>
+                        <span class="stat-label">Avg Rating</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">9</span>
+                        <span class="stat-label">New Releases</span>
+                    </div>
+                </section>
+
+                <section class="goto-wrap">
+                    <a class="goto-btn" href="./moviewebpage.html">Go To The Webpage</a>
+                </section>
+
+            </div>
+        </main>
+        <footer>
+            <div class="footercontainer">
+                <p class="cert">&copy; 2026 NewsDaily. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="../../script.js"></script>
+</body>
+
+</html>

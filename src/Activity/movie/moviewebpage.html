@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="moviewebpage.css">
+    <title>NetP &mdash; Discover And Stream Top Movies</title>
+    <script>try{var t=localStorage.getItem("newsdaily-theme");if(!t){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","light");}</script>
+</head>
+
+<body>
+    <div class="page">
+
+        <div class="ambient-glow glow-pink" aria-hidden="true"></div>
+        <div class="ambient-glow glow-gold" aria-hidden="true"></div>
+
+        <header class="site-header">
+            <a class="brand" href="#">NetP</a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="#home">Home</a>
+                <a href="#movie">Movie</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+                <button class="theme-toggle" type="button" aria-pressed="true"
+                    aria-label="Switch to light mode" title="Switch to light mode">&#9728;</button>
+            </nav>
+        </header>
+
+        <main>
+
+            <section class="hero" id="home">
+                <div class="hero-text">
+                    <h1 class="hero-title">Discover And Stream Top Movies</h1>
+                    <p class="hero-subtitle">
+                        The Most Secure Marketplace For Buying And Renting Unique Film Assets.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#movie">Watch Movies</a>
+                        <a class="btn btn-ghost" href="#movie">Stream Now</a>
+                    </div>
+                </div>
+
+                <div class="hero-showcase">
+                    <figure class="featured-poster">
+                        <img src="./poster6.png" alt="Whisper Man featured movie poster">
+                        <figcaption class="featured-caption">
+                            <span class="featured-name">Whisper Man</span>
+                            <span class="featured-meta">Featured &middot; 2025</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="community" id="contact">
+                <a class="pill pill-discord" href="#">
+                    <span class="pill-ico" aria-hidden="true">&#9679;</span>
+                    Join us on Discord
+                </a>
+                <a class="pill pill-reddit" href="#">
+                    <span class="pill-ico" aria-hidden="true">&#9679;</span>
+                    Join us on Reddit
+                </a>
+                <a class="pill pill-facebook" href="#">
+                    <span class="pill-ico" aria-hidden="true">&#9679;</span>
+                    Join us on Facebook
+                </a>
+                <a class="pill pill-donations" href="#">
+                    <span class="pill-ico" aria-hidden="true">&#9679;</span>
+                    Join us on Donations
+                </a>
+            </section>
+
+            <section class="trending" id="movie">
+                <h2 class="trending-title">Trending Movie</h2>
+
+                <div class="trending-grid">
+                    <article class="movie-card">
+                        <figure class="poster">
+                            <img src="./poster1.png" alt="Journey 2 movie poster">
+                        </figure>
+                        <h3 class="movie-name">Journey 2</h3>
+                    </article>
+
+                    <article class="movie-card">
+                        <figure class="poster">
+                            <img src="./poster2.png" alt="The Odyssey movie poster">
+                        </figure>
+                        <h3 class="movie-name">The Odyssey</h3>
+                    </article>
+
+                    <article class="movie-card">
+                        <figure class="poster">
+                            <img src="./poster3.png" alt="Insidious movie poster">
+                        </figure>
+                        <h3 class="movie-name">Insidious</h3>
+                    </article>
+
+                    <article class="movie-card">
+                        <figure class="poster">
+                            <img src="./poster4.png" alt="Coyote vs. Acme movie poster">
+                        </figure>
+                        <h3 class="movie-name">Coyote vs. Acme</h3>
+                    </article>
+
+                    <article class="movie-card">
+                        <figure class="poster">
+                            <img src="./poster5.png" alt="Bird Box Barcelona movie poster">
+                        </figure>
+                        <h3 class="movie-name">Bird Box Barcelona</h3>
+                    </article>
+
+                    <article class="movie-card">
+                        <figure class="poster">
+                            <img src="./poster6.png" alt="Whisper Man movie poster">
+                        </figure>
+                        <h3 class="movie-name">Whisper Man</h3>
+                    </article>
+                </div>
+            </section>
+
+            <section class="back-wrap" id="about">
+                <a class="back-btn" href="./movie.html">&larr; Back To Movie Activity</a>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2026 NetP. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="../../script.js"></script>
+</body>
+
+</html>
